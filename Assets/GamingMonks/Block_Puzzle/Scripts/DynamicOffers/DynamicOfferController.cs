@@ -48,14 +48,14 @@ namespace GamingMonks
            
             if (m_dynamicOfferProduct.purchaseType == PurchaseType.Money)
             {
-                if(IAPManagers.Instance.hasUnityIAPSdkInitialised)
-                {
-                    price = IAPManagers.Instance.GetIAPproductPrice(m_dynamicOfferProduct.productID.ToString());
-                }
-                else
-                {
-                    price = IAPManagers.Instance.GetDefaultPrice(m_dynamicOfferProduct.productID);
-                }
+                // if(IAPManagers.Instance.hasUnityIAPSdkInitialised)
+                // {
+                //     price = IAPManagers.Instance.GetIAPproductPrice(m_dynamicOfferProduct.productID.ToString());
+                // }
+                // else
+                // {
+                //     price = IAPManagers.Instance.GetDefaultPrice(m_dynamicOfferProduct.productID);
+                // }
             }
             else
             {
@@ -84,7 +84,7 @@ namespace GamingMonks
         {
             if(m_dynamicOfferProduct.purchaseType == PurchaseType.Money)
             {
-                IAPManagers.Instance.PurchaseProduct(m_dynamicOfferProduct.productID.ToString(), activeGameObject);
+                //IAPManagers.Instance.PurchaseProduct(m_dynamicOfferProduct.productID.ToString(), activeGameObject);
             }
             else
             {

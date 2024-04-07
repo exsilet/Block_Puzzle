@@ -77,7 +77,7 @@ namespace GamingMonks
             txtThemeName.text = setting.themeName;
             imgBlockSample.sprite = setting.demoSprite;
             //txtUnlockPrice.text = setting.unlockCost.ToString();
-            txtUnlockPrice.text = GetPriceText();
+            //txtUnlockPrice.text = GetPriceText();
 
             bool unlockStatus = false;
             /*
@@ -140,7 +140,7 @@ namespace GamingMonks
                 //UIController.Instance.shopScreen.gameObject.Activate();
             }
             */
-            IAPManagers.Instance.PurchaseProduct(currentSelectedTheme.themeIAPID.ToString());
+            //IAPManagers.Instance.PurchaseProduct(currentSelectedTheme.themeIAPID.ToString());
         }
 
         public void UnlockTheme()
@@ -198,19 +198,19 @@ namespace GamingMonks
             }
         }
 
-        private string GetPriceText()
-        {
-            if (IAPManagers.Instance.hasUnityIAPSdkInitialised)
-            {
-                UnityEngine.Purchasing.Product thisProduct = IAPManagers.Instance.GetProduct(currentSelectedTheme.themeIAPID.ToString());
-                if (thisProduct != null)
-                {
-                      return thisProduct.metadata.localizedPriceString;
-                }
-            }
-            
-            return IAPManagers.Instance.GetDefaultPrice(currentSelectedTheme.themeIAPID);
-        }
+        // private string GetPriceText()
+        // {
+        //     if (IAPManagers.Instance.hasUnityIAPSdkInitialised)
+        //     {
+        //         UnityEngine.Purchasing.Product thisProduct = IAPManagers.Instance.GetProduct(currentSelectedTheme.themeIAPID.ToString());
+        //         if (thisProduct != null)
+        //         {
+        //               return thisProduct.metadata.localizedPriceString;
+        //         }
+        //     }
+        //     
+        //     return IAPManagers.Instance.GetDefaultPrice(currentSelectedTheme.themeIAPID);
+        // }
 
         public IAPProductID ThemeProductID
         {

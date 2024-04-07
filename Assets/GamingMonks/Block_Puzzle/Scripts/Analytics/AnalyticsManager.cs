@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using Unity.Services.Analytics;
-using Unity.Services.Core;
 using UnityEngine;
 using GamingMonks;
 
@@ -11,18 +9,18 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 
     async void Start()
     {
-        try
-        {
-            await UnityServices.InitializeAsync();
-            _isInitialized = true;
-            List<string> consentIdentifiers = await AnalyticsService.Instance.CheckForRequiredConsents();
-        }
-        catch (ConsentCheckException e)
-        {
-            // Something went wrong when checking the GeoIP, check the e.Reason and handle appropriately.
-            _isInitialized = false;
-            Debug.Log(e);
-        }
+        // try
+        // {
+        //     await UnityServices.InitializeAsync();
+        //     _isInitialized = true;
+        //     //List<string> consentIdentifiers = await AnalyticsService.Instance.CheckForRequiredConsents();
+        // }
+        // catch (ConsentCheckException e)
+        // {
+        //     // Something went wrong when checking the GeoIP, check the e.Reason and handle appropriately.
+        //     _isInitialized = false;
+        //     Debug.Log(e);
+        // }
     }
 
     public void LevelEvent(int levelNumber,bool hasWon , string status)
@@ -41,7 +39,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
         }
         if (_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("Level", parameter);
+            //AnalyticsService.Instance.CustomData("Level", parameter);
         }
         // AnalyticsService.Instance.Flush();
     }
@@ -52,7 +50,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
         {
             if (_isInitialized)
             {
-                AnalyticsService.Instance.CustomData("First_Game_Lauch", null);
+                //AnalyticsService.Instance.CustomData("First_Game_Lauch", null);
             }
             PlayerPrefs.SetInt("FirstGameLauch", 1);
         }
@@ -62,7 +60,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
     {
         if(_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("Tutorial_Started", null);
+            //AnalyticsService.Instance.CustomData("Tutorial_Started", null);
         }
     }
 
@@ -70,7 +68,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
     {
         if (_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("Tutorial_Ended", null);
+            //AnalyticsService.Instance.CustomData("Tutorial_Ended", null);
         }
     }
 
@@ -89,7 +87,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 
         if (_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("Game_win", parameter);
+            //AnalyticsService.Instance.CustomData("Game_win", parameter);
         }
         // AnalyticsService.Instance.Flush();
     }
@@ -109,7 +107,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 
         if(_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("Game_lose", parameter);
+            //AnalyticsService.Instance.CustomData("Game_lose", parameter);
         }
         // AnalyticsService.Instance.Flush();
     }
@@ -126,7 +124,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 
         if (_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("Game_played", parameter);
+            //AnalyticsService.Instance.CustomData("Game_played", parameter);
         }
         // AnalyticsService.Instance.Flush();
     }
@@ -168,7 +166,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 
         if (_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("Out_of_move", parameter);
+            //AnalyticsService.Instance.CustomData("Out_of_move", parameter);
         }
         // AnalyticsService.Instance.Flush();
     }
@@ -194,7 +192,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 
         if (_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("Continued_game", parameter);
+            //AnalyticsService.Instance.CustomData("Continued_game", parameter);
         }
         // AnalyticsService.Instance.Flush();
     }
@@ -220,7 +218,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 
         if (_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("Rotate_powerup_used", parameter);
+            //AnalyticsService.Instance.CustomData("Rotate_powerup_used", parameter);
         }
         // AnalyticsService.Instance.Flush();
     }
@@ -246,7 +244,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 
         if (_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("SingleBlock_powerup_used", parameter);
+           //AnalyticsService.Instance.CustomData("SingleBlock_powerup_used", parameter);
         }
         // AnalyticsService.Instance.Flush();
     }
@@ -272,7 +270,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 
         if (_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("Bomb_powerup_used", parameter);
+            //AnalyticsService.Instance.CustomData("Bomb_powerup_used", parameter);
         }
         // AnalyticsService.Instance.Flush();
     }
@@ -292,7 +290,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 
         if (_isInitialized)
         {
-            AnalyticsService.Instance.CustomData("BoxingGlove_powerup_used", parameter);
+            //AnalyticsService.Instance.CustomData("BoxingGlove_powerup_used", parameter);
         }
         // AnalyticsService.Instance.Flush();
     }

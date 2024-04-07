@@ -1,11 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using GamingMonks.Localization;
+﻿using GamingMonks.Localization;
 using UnityEngine;
-
-#if HB_UNITYIAP
-using UnityEngine.Purchasing;
-#endif
 
 namespace GamingMonks
 {
@@ -14,20 +8,20 @@ namespace GamingMonks
         /// <summary>
         /// This function is called when the behaviour becomes enabled or active.
         /// </summary>
-        private void OnEnable() {
-            IAPManagers.OnPurchaseSuccessfulEvent += OnPurchaseSuccessful;
-            IAPManagers.OnPurchaseFailedEvent += OnPurchaseFailed;
-            IAPManagers.OnRestoreCompletedEvent += OnRestoreCompleted;
-        }
-
-        /// <summary>
-        /// This function is called when the behaviour becomes disabled or inactive.
-        /// </summary>
-        private void OnDisable() {
-            IAPManagers.OnPurchaseSuccessfulEvent -= OnPurchaseSuccessful;
-            IAPManagers.OnPurchaseFailedEvent -= OnPurchaseFailed;
-            IAPManagers.OnRestoreCompletedEvent -= OnRestoreCompleted;
-        }
+        // private void OnEnable() {
+        //     IAPManagers.OnPurchaseSuccessfulEvent += OnPurchaseSuccessful;
+        //     IAPManagers.OnPurchaseFailedEvent += OnPurchaseFailed;
+        //     IAPManagers.OnRestoreCompletedEvent += OnRestoreCompleted;
+        // }
+        //
+        // /// <summary>
+        // /// This function is called when the behaviour becomes disabled or inactive.
+        // /// </summary>
+        // private void OnDisable() {
+        //     IAPManagers.OnPurchaseSuccessfulEvent -= OnPurchaseSuccessful;
+        //     IAPManagers.OnPurchaseFailedEvent -= OnPurchaseFailed;
+        //     IAPManagers.OnRestoreCompletedEvent -= OnRestoreCompleted;
+        // }
 
         void OnPurchaseSuccessful(Product purchasedProduct)
         {

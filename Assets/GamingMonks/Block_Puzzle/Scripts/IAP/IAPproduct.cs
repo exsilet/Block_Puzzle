@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Purchasing;
 
 namespace GamingMonks
 {
@@ -15,7 +12,7 @@ namespace GamingMonks
     public class Product
     {
         public IAPProductID Id;
-        public ProductType productType;
+        //public ProductType productType;
         public RewardType rewardType;
         public string price;
         public Reward reward;

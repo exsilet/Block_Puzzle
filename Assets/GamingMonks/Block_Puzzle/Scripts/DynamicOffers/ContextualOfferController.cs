@@ -29,7 +29,7 @@ namespace GamingMonks
 
         public void Initialize(int deficitCoin)
         {
-            m_purchasingProduct = IAPManagers.Instance.GetCoinPackProduct(deficitCoin);
+            //m_purchasingProduct = IAPManagers.Instance.GetCoinPackProduct(deficitCoin);
 
             if(m_purchasingProduct != null)
             {
@@ -42,14 +42,14 @@ namespace GamingMonks
 
                 string price = "";
 
-                if (IAPManagers.Instance.hasUnityIAPSdkInitialised)
-                {
-                    price = IAPManagers.Instance.GetIAPproductPrice(m_purchasingProduct.Id.ToString());
-                }
-                else
-                {
-                    price = IAPManagers.Instance.GetDefaultPrice(m_purchasingProduct.Id);
-                }
+                // if (IAPManagers.Instance.hasUnityIAPSdkInitialised)
+                // {
+                //     price = IAPManagers.Instance.GetIAPproductPrice(m_purchasingProduct.Id.ToString());
+                // }
+                // else
+                // {
+                //     price = IAPManagers.Instance.GetDefaultPrice(m_purchasingProduct.Id);
+                // }
 
                 switch (m_purchasingProduct.Id)
                 {
@@ -77,7 +77,7 @@ namespace GamingMonks
 
         public void OnBuyButtonClick(GameObject activeGameObject)
         {
-            IAPManagers.Instance.PurchaseProduct(m_purchasingProduct.Id.ToString(), activeGameObject, this.gameObject);
+            //IAPManagers.Instance.PurchaseProduct(m_purchasingProduct.Id.ToString(), activeGameObject, this.gameObject);
         }
 
         public void OnCloseButtonClick(GameObject activeGameObject)

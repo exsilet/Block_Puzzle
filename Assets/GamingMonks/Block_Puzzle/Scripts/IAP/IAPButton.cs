@@ -12,7 +12,7 @@ namespace GamingMonks
 
         private Button thisButton;
         private bool hasInitialized = false;
-        private UnityEngine.Purchasing.Product thisProduct;
+        //private UnityEngine.Purchasing.Product thisProduct;
 
 
         private void Awake()
@@ -40,32 +40,32 @@ namespace GamingMonks
 
             if (!hasInitialized)
             {
-                if (IAPManagers.Instance.hasUnityIAPSdkInitialised)
-                {
-                    thisProduct = IAPManagers.Instance.GetProduct(productID.ToString());
-                    if (thisProduct != null)
-                    {
-                        if (priceText != null)
-                        {
-                            priceText.text = thisProduct.metadata.localizedPriceString;
-                        }
-                        hasInitialized = true;
-                    }
-                }
-                else
-                {
-                    if (priceText != null)
-                    {
-                        priceText.text = IAPManagers.Instance.GetDefaultPrice(productID);
-                    }
-                }
+                // if (IAPManagers.Instance.hasUnityIAPSdkInitialised)
+                // {
+                //     thisProduct = IAPManagers.Instance.GetProduct(productID.ToString());
+                //     if (thisProduct != null)
+                //     {
+                //         if (priceText != null)
+                //         {
+                //             priceText.text = thisProduct.metadata.localizedPriceString;
+                //         }
+                //         hasInitialized = true;
+                //     }
+                // }
+                // else
+                // {
+                //     if (priceText != null)
+                //     {
+                //         priceText.text = IAPManagers.Instance.GetDefaultPrice(productID);
+                //     }
+                // }
             }
         }
 
         // Purchase button click listner.
         void OnPurchaseButtonPressed()
         {
-            IAPManagers.Instance.PurchaseProduct(productID.ToString());
+            //IAPManagers.Instance.PurchaseProduct(productID.ToString());
         }
     }
 }

@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
-using Unity.Services.Core;
-using Unity.Services.Core.Environments;
 
 public class GamingServiceInit : MonoBehaviour
 {
@@ -16,18 +12,18 @@ public class GamingServiceInit : MonoBehaviour
    
     async void InitializeGamingService()
     {
-        Debug.Log("Initialize Gaming service");
-        try
-        {
-            InitializationOptions options = new InitializationOptions()
-                .SetEnvironmentName(environment);
-
-            await UnityServices.InitializeAsync(options);
-        }
-        catch (Exception exception)
-        {
-            Debug.Log(exception);
-        }
+        // Debug.Log("Initialize Gaming service");
+        // try
+        // {
+        //     InitializationOptions options = new InitializationOptions()
+        //         .SetEnvironmentName(environment);
+        //
+        //     await UnityServices.InitializeAsync(options);
+        // }
+        // catch (Exception exception)
+        // {
+        //     Debug.Log(exception);
+        // }
     }
 
 }

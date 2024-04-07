@@ -38,7 +38,7 @@ namespace GamingMonks
 			//UIController.Instance.EnableCurrencyBalanceButton();
 			contentPanel.anchoredPosition = Vector2.zero;
             GamePlayUI.Instance.PauseGame();
-            IAPManagers.OnPurchaseSuccessfulEvent += OnPurchaseSuccessful;         
+            //IAPManagers.OnPurchaseSuccessfulEvent += OnPurchaseSuccessful;         
             UpdateShopScreen();
 		}
 
@@ -48,7 +48,7 @@ namespace GamingMonks
 		private void OnDisable() {
 			// Don't hide gems button if rescue screen is open.
             UIController.Instance.Invoke("DisableCurrencyBalanceButton",0.1F);
-            IAPManagers.OnPurchaseSuccessfulEvent -= OnPurchaseSuccessful;
+            //IAPManagers.OnPurchaseSuccessfulEvent -= OnPurchaseSuccessful;
             GamePlayUI.Instance.ResumeGame();
         }
 
