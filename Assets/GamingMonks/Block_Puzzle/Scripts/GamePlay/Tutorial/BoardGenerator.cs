@@ -113,7 +113,7 @@ namespace GamingMonks.Tutorial
                     {
                         block.GetComponent<BoxCollider2D>().enabled = true;
                         int randomNumber = Random.Range(0, gamePlaySettings.blockSpriteColorTags.Length);
-                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[randomNumber]), gamePlaySettings.blockSpriteColorTags[randomNumber]);
+                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[4]), gamePlaySettings.blockSpriteColorTags[4]);
                         block.GetComponent<Image>().color = new Color(1, 1, 1, 1F);
                     }
                     else
@@ -131,7 +131,7 @@ namespace GamingMonks.Tutorial
                     {
                         block.GetComponent<BoxCollider2D>().enabled = true;
                         int randomNumber = Random.Range(0, gamePlaySettings.blockSpriteColorTags.Length);
-                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[randomNumber]), gamePlaySettings.blockSpriteColorTags[randomNumber]);
+                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[4]), gamePlaySettings.blockSpriteColorTags[4]);
                         block.GetComponent<Image>().color = new Color(1, 1, 1, 1F);
                     }
                     else
@@ -157,7 +157,7 @@ namespace GamingMonks.Tutorial
                     {
                         block.GetComponent<BoxCollider2D>().enabled = true;
                         int randomNumber = Random.Range(0, gamePlaySettings.blockSpriteColorTags.Length);
-                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[randomNumber]), gamePlaySettings.blockSpriteColorTags[randomNumber]);
+                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[0]), gamePlaySettings.blockSpriteColorTags[0]);
                         block.GetComponent<Image>().color = new Color(1, 1, 1, 1F);
                     }
                     else
@@ -175,7 +175,7 @@ namespace GamingMonks.Tutorial
                     {
                         block.GetComponent<BoxCollider2D>().enabled = true;
                         int randomNumber = Random.Range(0, gamePlaySettings.blockSpriteColorTags.Length);
-                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[randomNumber]), gamePlaySettings.blockSpriteColorTags[randomNumber]);
+                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[0]), gamePlaySettings.blockSpriteColorTags[0]);
                         block.GetComponent<Image>().color = new Color(1, 1, 1, 1F);
                     }
                     else
@@ -194,7 +194,7 @@ namespace GamingMonks.Tutorial
                     {
                         block.GetComponent<BoxCollider2D>().enabled = true;
                         int randomNumber = Random.Range(0, gamePlaySettings.blockSpriteColorTags.Length);
-                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[randomNumber]), gamePlaySettings.blockSpriteColorTags[randomNumber]);
+                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[0]), gamePlaySettings.blockSpriteColorTags[0]);
                         block.GetComponent<Image>().color = new Color(1, 1, 1, 1F);
                     }
                     else
@@ -221,7 +221,7 @@ namespace GamingMonks.Tutorial
                     {
                         block.GetComponent<BoxCollider2D>().enabled = true;
                         int randomNumber = Random.Range(0, gamePlaySettings.blockSpriteColorTags.Length);
-                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[randomNumber]), gamePlaySettings.blockSpriteColorTags[randomNumber]);
+                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[3]), gamePlaySettings.blockSpriteColorTags[3]);
                         block.GetComponent<Image>().color = new Color(1, 1, 1, 1F);
                     }
                     else
@@ -239,7 +239,7 @@ namespace GamingMonks.Tutorial
                     {
                         block.GetComponent<BoxCollider2D>().enabled = true;
                         int randomNumber = Random.Range(0, gamePlaySettings.blockSpriteColorTags.Length);
-                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[randomNumber]), gamePlaySettings.blockSpriteColorTags[randomNumber]);
+                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[3]), gamePlaySettings.blockSpriteColorTags[3]);
                         block.GetComponent<Image>().color = new Color(1, 1, 1, 1F);
                     }
                     else
@@ -257,7 +257,7 @@ namespace GamingMonks.Tutorial
                     {
                         block.GetComponent<BoxCollider2D>().enabled = true;
                         int randomNumber = Random.Range(0, gamePlaySettings.blockSpriteColorTags.Length);
-                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[randomNumber]), gamePlaySettings.blockSpriteColorTags[randomNumber]);
+                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[3]), gamePlaySettings.blockSpriteColorTags[3]);
                         block.GetComponent<Image>().color = new Color(1, 1, 1, 1F);
                     }
                     else
@@ -275,7 +275,7 @@ namespace GamingMonks.Tutorial
                     {
                         block.GetComponent<BoxCollider2D>().enabled = true;
                         int randomNumber = Random.Range(0, gamePlaySettings.blockSpriteColorTags.Length);
-                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[randomNumber]), gamePlaySettings.blockSpriteColorTags[randomNumber]);
+                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[3]), gamePlaySettings.blockSpriteColorTags[3]);
                         block.GetComponent<Image>().color = new Color(1, 1, 1, 1F);
                     }
                     else
@@ -293,7 +293,7 @@ namespace GamingMonks.Tutorial
                     {
                         block.GetComponent<BoxCollider2D>().enabled = true;
                         int randomNumber = Random.Range(0, gamePlaySettings.blockSpriteColorTags.Length);
-                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[randomNumber]), gamePlaySettings.blockSpriteColorTags[randomNumber]);
+                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[3]), gamePlaySettings.blockSpriteColorTags[3]);
                         block.GetComponent<Image>().color = new Color(1, 1, 1, 1F);
                     }
                     else
@@ -311,7 +311,7 @@ namespace GamingMonks.Tutorial
                     {
                         block.GetComponent<BoxCollider2D>().enabled = true;
                         int randomNumber = Random.Range(0, gamePlaySettings.blockSpriteColorTags.Length);
-                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[randomNumber]), gamePlaySettings.blockSpriteColorTags[randomNumber]);
+                        block.PlaceBlock(ThemeManager.Instance.GetBlockSpriteWithTag(gamePlaySettings.blockSpriteColorTags[3]), gamePlaySettings.blockSpriteColorTags[3]);
                         block.GetComponent<Image>().color = new Color(1, 1, 1, 1F);
                     }
                     else
