@@ -1,7 +1,7 @@
 {
-    "idSave": 3,
+    "idSave": 6,
     "isFirstSession": false,
-    "language": "ru",
+    "language": "en",
     "promptDone": true,
     "money": 123,
     "newPlayerName": "вапфы",
@@ -9,5 +9,6 @@
         false,
         false,
         true
-    ]
+    ],
+    "record": 0
 }

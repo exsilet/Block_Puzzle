@@ -89,7 +89,24 @@ namespace YG
             {
                 if (data.thisPlayer)
                 {
-                    ActivityMomoObjects(thisPlayerActivityComponents, true);
+                    if (data.rank == "1")
+                    {
+                        topPlayerActivityComponents[0].gameObject.SetActive(true);
+                        topPlayerActivityComponents[1].gameObject.SetActive(false);
+                        topPlayerActivityComponents[2].gameObject.SetActive(false);
+                    }
+                    if (data.rank == "2")
+                    {
+                        topPlayerActivityComponents[0].gameObject.SetActive(false);
+                        topPlayerActivityComponents[1].gameObject.SetActive(true);
+                        topPlayerActivityComponents[2].gameObject.SetActive(false);
+                    }
+                    if (data.rank == "3")
+                    {
+                        topPlayerActivityComponents[0].gameObject.SetActive(false);
+                        topPlayerActivityComponents[1].gameObject.SetActive(false);
+                        topPlayerActivityComponents[2].gameObject.SetActive(true);
+                    }
                 }
                 else
                 {

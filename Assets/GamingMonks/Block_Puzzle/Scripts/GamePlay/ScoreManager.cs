@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using GamingMonks.UITween;
 using TMPro;
+using YG;
 
 namespace GamingMonks
 {
@@ -93,6 +94,7 @@ namespace GamingMonks
                 ProfileManager.Instance.SetBestScore(Score, GamePlayUI.Instance.currentGameMode);
                 StartCoroutine(SetHighScore(bestScore, Score));
                 bestScore = Score;
+                
             }
         }
 

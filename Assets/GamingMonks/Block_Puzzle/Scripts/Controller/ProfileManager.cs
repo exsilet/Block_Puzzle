@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using GamingMonks.Ads;
 using GamingMonks.HapticFeedback;
+using YG;
 
 namespace GamingMonks
 {
@@ -270,6 +271,13 @@ namespace GamingMonks
         public void SetBestScore(int score, GameMode gameMode)
         {
             PlayerPrefs.SetInt("bestScore_" + gameMode, score);
+            if (gameMode.ToString() == "Classic")
+            {
+                YandexGame.savesData.record = score;
+                YandexGame.NewLeaderboardScores("Block", score);
+                YandexGame.SaveProgress();
+            }
+            
         }
     }
 }
