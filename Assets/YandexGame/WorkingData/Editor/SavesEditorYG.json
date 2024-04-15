@@ -1,0 +1,13 @@
+{
+    "idSave": 3,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": true,
+    "money": 123,
+    "newPlayerName": "вапфы",
+    "openLevels": [
+        false,
+        false,
+        true
+    ]
+}

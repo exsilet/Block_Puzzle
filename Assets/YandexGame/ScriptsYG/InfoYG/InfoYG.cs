@@ -336,6 +336,7 @@ namespace YG
         [Serializable]
         public class FontsSizeCorrect
         {
+            [Tooltip("Стандартный шрифт")] public TMP_FontAsset[] defaultFont;
             [Tooltip("RUSSIAN")] public int[] ru;
             [Tooltip("ENGLISH")] public int[] en;
             [Tooltip("TURKISH")] public int[] tr;

@@ -2,6 +2,7 @@ using GamingMonks.Localization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 namespace GamingMonks
 {
@@ -87,6 +88,7 @@ namespace GamingMonks
             // {
             //     AdmobManager.Instance.RequestAndLoadInterstitialAd();
             // }
+            
             UIFeedback.Instance.PlayButtonPressEffect();
             UIController.Instance.gameWinScreen.Deactivate();
             if (!PlayerPrefs.HasKey("isUserAdFree") && !(PlayerPrefs.GetInt("isUserAdFree") == 1))
@@ -99,7 +101,7 @@ namespace GamingMonks
             //}
         }
 
-        public void GetFiveCoinsByWatchingAdBtnPressed()
+        public void GetFiveCoinsByWatchingAdBtnPressed(int idReward)
         {
             AdmobManager.Instance.ShowRewardedAd(RewardAdType.GetExtraCoins);
         }

@@ -17,6 +17,7 @@ namespace GamingMonks
         List<string> screenStack = new List<string>();
 
         [SerializeField] Canvas UICanvas;
+        [SerializeField] private GameObject _bgFont;
 
         [Header("UI Screens")]
         public HomeScreen homeScreen;
@@ -852,6 +853,7 @@ namespace GamingMonks
         public void LoadClassicFromTutorial()
         {
             gameScreen_Tutorial.gameObject.Deactivate();
+            _bgFont.SetActive(true);
             if (PlayerPrefs.GetInt("CurrentLevel") == 0)
             {
                 PlayerPrefs.SetInt("CurrentLevel", 1);

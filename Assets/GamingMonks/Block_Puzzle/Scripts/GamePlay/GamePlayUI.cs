@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GamingMonks
 {
@@ -16,6 +17,9 @@ namespace GamingMonks
 
     public class GamePlayUI : Singleton<GamePlayUI>
     {
+        [SerializeField] private Image _fontPole8;
+        [SerializeField] private Image _fontPole9;
+        [SerializeField] private Image _fontPole10;
 
         [Header("Public Class Members")]
         [Tooltip("GamePlay Script Reference")]
@@ -130,6 +134,7 @@ namespace GamingMonks
 
                 currentGameMode = GameMode.Level;
                 currentModeSettings = levelSO.Levels[levelToLoad - 1].Mode.GameModeSettings;
+                FonGenerate(currentModeSettings);
                 currentLevel = levelSO.Levels[levelToLoad-1];
                 GamePlay.Instance.allShapes.Clear();
                 gamePlay.maxMovesAllowed = currentModeSettings.maxMoves;
@@ -148,6 +153,7 @@ namespace GamingMonks
             {
                 currentGameMode = gameMode;
                 currentModeSettings = GetCurrentModeSettings();
+                FonGenerate(currentModeSettings);
 
                 scorePanel.gameObject.GetComponent<Canvas>().sortingOrder = 1;
                 targetPanel.gameObject.GetComponent<Canvas>().sortingOrder = -1;
@@ -180,10 +186,8 @@ namespace GamingMonks
             gamePlay.boardGenerator.GenerateBoard(progressData);
 
             // gamePlay.blockShapeController.PrepareShapeContainer(progressData);
-
-            
-           
             //}
+            
             #region Time Mode Specific
             // Will enable timer start seeking it. If there is previos session data then timer will start from remaining duration.
             //if(gameMode == GameMode.Timed) {
@@ -678,6 +682,28 @@ namespace GamingMonks
                 return true;
             }
             return false;
+        }
+
+        private void FonGenerate(GameModeSettings modeSettings)
+        {
+            if (modeSettings.boardSize == BoardSize.BoardSize_8X8)
+            {
+                _fontPole8.gameObject.SetActive(true);
+                _fontPole9.gameObject.SetActive(false);
+                _fontPole10.gameObject.SetActive(false);
+            }
+            else if (modeSettings.boardSize == BoardSize.BoardSize_9X9)
+            {
+                _fontPole8.gameObject.SetActive(false);
+                _fontPole9.gameObject.SetActive(true);
+                _fontPole10.gameObject.SetActive(false);
+            }
+            else if (modeSettings.boardSize == BoardSize.BoardSize_10X10)
+            {
+                _fontPole8.gameObject.SetActive(false);
+                _fontPole9.gameObject.SetActive(false);
+                _fontPole10.gameObject.SetActive(true);
+            }
         }
     }
 }

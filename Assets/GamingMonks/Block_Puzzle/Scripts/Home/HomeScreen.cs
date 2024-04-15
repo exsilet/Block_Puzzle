@@ -14,7 +14,6 @@ namespace GamingMonks
         [SerializeField] Button m_otherMode;
         [SerializeField] Button m_btnClassicMode;
         [SerializeField] Button m_btnLevelMode;
-        [SerializeField] GameObject m_handAnimation;
         [SerializeField] GameObject m_tag;
         #endregion
 #pragma warning restore 0649
@@ -58,13 +57,11 @@ namespace GamingMonks
 
             if (PlayerPrefs.GetInt("firstLevelShown") == 1)
             {
-                m_handAnimation.SetActive(false);
                 m_otherMode.interactable = true;
                 m_btnClassicMode.interactable = true;
             }
             else
             {
-                m_handAnimation.SetActive(true);
                 m_btnClassicMode.interactable = false;
                 m_otherMode.interactable = false;
                 m_tag.SetActive(true);
@@ -185,7 +182,6 @@ namespace GamingMonks
                 {
                     PlayerPrefs.SetInt("firstLevelShown", 1);
                     PlayerPrefs.SetInt("firstFailClassicMode", 1);
-                    m_handAnimation.SetActive(false);
                     UIController.Instance.LoadFirstLevelFromHomeScreen();
                 }
                 else
