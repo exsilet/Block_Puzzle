@@ -1,6 +1,11 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <Resources>	
 	<!-- Common-->
+    <string name="txtChoiceAnytime" text="Вы можете изменить свой выбор в любое время в настройках приложения. Наши партнеры будут собирать данные и использовать уникальный идентификатор на вашем устройстве, чтобы показывать вам рекламу. Узнайте больше о том, как это приложение и наши партнеры собирают и используют данные:"/>
+    <string name="txtContinueData" text="Можем ли мы продолжать использовать ваши данные, чтобы адаптировать для вас рекламу?"/>
+    <string name="txtPrivacyData" text="Мы заботимся о вашей конфиденциальности и безопасности данных. Мы сохраняем приложения бесплатными, показывая рекламу"/>
+    <string name="txtWatchVideo" text="Посмотрите видеорекламу, чтобы получить 5 монет"/>
+    <string name="txtLeaderBoard" text="ТАБЛИЦА ЛИДЕРОВ"/>
 	<string name="txtDataPrivacy" text="КОНФИДЕНЦИАЛЬНОСТЬ ДАННЫХ"/>
 	<string name="txtPrivacyPolicy" text="ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ"/>
 	<string name="txtContinue" text="ПРОДОЛЖИТЬ"/>
@@ -17,8 +22,21 @@
 	<string name="txtAwesome" text="КРУТО!"/>
 	<string name="txtLevel" text="Уровень"/>
 	<string name="txtRetry" text="Повторить"/>
-    
-	<!-- Consent Setting -->
+    <string name = "txtCoinPack" text = "Пакет монет" />
+    <string name = "txtYouWin" text = "ТЫ ПОБЕДИЛ !!" />
+    <string name = "txtLevel300" text = "Уровень 300" />
+    <string name = "txtGot5Coins" text = "У вас есть 5 монет" />
+    <string name = "txtGoal" text = "Цель" />
+    <string name = "txtBreakBox" text = "Разбейте коробку, чтобы забрать свинью" />
+    <string name = "txtMovesLeft" text = "Здесь вы увидите, сколько ходов у вас осталось. Продолжайте собирать цели" />
+    <string name = "txtMoreLives" text = "Больше жизней?" />
+    <string name = "txtVideo1life" text = "Посмотрите видеорекламу, чтобы получить 1 жизнь" />
+    <string name = "txtClassic" text = "Классика" />
+    <string name = "txtSound" text = "Звук" />
+    <string name = "txtRestart?" text = "Заново?" />
+
+
+    <!-- Consent Setting -->
 	 <string name="txtNotNow" text="Сейчас не время"/>
     <string name="txtDataSetting_content1" text="Мы заботимся о вашей конфиденциальности и безопасности данных. Мы сохраняем бесплатность приложений, показывая рекламу."/>
     <string name="txtDataSetting_content2" text="Можем ли мы продолжить использовать ваши данные для настройки рекламы для вас?"/>
@@ -96,7 +114,7 @@
 
     <!-- RESCUE -->
     <string name="txtDontgiveup" text="Невозможно разместить фигуры!"/>
-    <string name="txtSubContent" text="Вы потеряете 1 жизнь!"/>
+    <string name="txtSubContent" text="Начав заново Вы потеряете 1 жизнь!"/>
     <string name="txtContinuePlaying" text="Продолжить игру?"/>
 
     <!-- Quit Game -->

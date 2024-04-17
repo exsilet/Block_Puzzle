@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Resources>	
 	<!-- Common-->
+	<string name="txtChoiceAnytime" text="Puede cambiar su elección en cualquier momento en la configuración de la aplicación. Nuestros socios recopilarán datos y utilizarán un identificador único en su dispositivo para mostrarle anuncios. Obtenga más información sobre cómo esta aplicación y nuestros socios recopilan y utilizan datos:"/>
+	<string name="txtContinueData" text="¿Podemos seguir utilizando sus datos para personalizar los anuncios para usted?"/>
+	<string name="txtPrivacyData" text="Nos preocupamos por su privacidad y seguridad de sus datos. Mantenemos las aplicaciones gratuitas mostrando anuncios"/>
+	<string name="txtWatchVideo" text="Mira un anuncio en vídeo para conseguir 5 monedas"/>
+	<string name="txtLeaderBoard" text="TABLA DE LÍDERES"/>
 	<string name = "txtDataPrivacy" text = "PRIVACIDAD DE DATOS" />
 	<string name = "txtPrivacyPolicy" text = "POLÍTICA DE PRIVACIDAD" />
 	<string name = "txtContinue" text = "SEGUIR" />
@@ -15,7 +20,21 @@
 	<string name = "txtOutOfGemsTitle" text = "FUERA DE GEMAS!" />
 	<string name = "txtFreeGems" text = "¡GEMAS GRATUITAS!" />
 	<string name = "txtAwesome" text = "¡INCREÍBLE!" />
-	    
+	<string name = "txtCoinPack" text = "Paquete de monedas" />
+	<string name="txtLevel" text="Seviye"/>
+	<string name = "txtYouWin" text = "TÚ GANAS !!" />
+	<string name = "txtLevel300" text = "Nivel 300" />
+	<string name = "txtGot5Coins" text = "Tienes 5 monedas" />
+	<string name = "txtGoal" text = "Meta" />
+	<string name = "txtBreakBox" text = "Rompe la caja para recoger el cerdo" />
+	<string name = "txtMovesLeft" text = "Aquí verás cuántos movimientos te quedan. Sigue recolectando objetivos" />
+	<string name = "txtMoreLives" text = "¿Más vidas?" />
+	<string name = "txtVideo1life" text = "Mire un anuncio en video para obtener 1 vida" />
+	<string name = "txtClassic" text = "Clásica" />
+	<string name = "txtSound" text = "Sonido" />
+	<string name = "txtRestart?" text = "¿Reanudar?" />
+
+
 	<!-- Consent Setting -->
 	<string name = "txtNotNow" text = "Ahora no" />
 	<string name = "txtDataSetting_content1" text = "Nos preocupamos por su privacidad y seguridad de datos. Mantenemos las aplicaciones gratuitas al mostrar anuncios." />
@@ -93,6 +112,8 @@
 
 	<!-- RESCUE -->
 	<string name = "txtDontgiveup" text = "¡No te rindas, tienes una oportunidad más!" />
+	<string name = "txtSubContent" text = "Empezando de nuevo ¡Perderás 1 vida!"/>
+	<string name = "txtContinuePlaying" text = "¿Continuar jugando?"/>
 
 	<!-- Quit Game -->
 	<string name = "txtQuitTitle" text = "¡SALIR CONFIRMAR!" />

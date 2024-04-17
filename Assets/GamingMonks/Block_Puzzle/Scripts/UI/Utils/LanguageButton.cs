@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 namespace GamingMonks
 {
@@ -32,11 +33,35 @@ namespace GamingMonks
         /// <summary>
         ///  Initializes language button and restores its state.
         /// </summary>
+        ///
+        private string[] langRu = { "Английский", "Испанский", "Русский", "Турецкий" };
+        private string[] langEn = { "English", "Español", "Russian", "Turkish" };
+        private string[] langEs = { "Ingles", "Española", "Rusa", "Turca" };
+        private string[] langTr = { "İngilizce", "İspanyolca", "Rusça", "Türkçe" };
+
         public void SetLanaguage(LocalizedLanguage lang, bool isActive = false)
         {
             currentButtonLanaguage = lang;
             txtLangaugeName.text = currentButtonLanaguage.langaugeDisplayName;
-
+            Debug.Log(txtLangaugeName.text);
+            if (LocalizationManager.Instance.GetCurrentLanguage().languageCode == "EN")
+            {
+                txtLangaugeName.text = langEn[Array.IndexOf(langEn, txtLangaugeName.text)];
+            }
+            if (LocalizationManager.Instance.GetCurrentLanguage().languageCode == "ES")
+            {
+                Debug.Log(Array.IndexOf(langEn, txtLangaugeName.text));
+                txtLangaugeName.text = langEs[Array.IndexOf(langEn, txtLangaugeName.text)];
+            }
+            if (LocalizationManager.Instance.GetCurrentLanguage().languageCode == "RU")
+            {
+                txtLangaugeName.text = langRu[Array.IndexOf(langEn, txtLangaugeName.text)];
+            }
+            if (LocalizationManager.Instance.GetCurrentLanguage().languageCode == "TR")
+            {
+                txtLangaugeName.text = langTr[Array.IndexOf(langEn, txtLangaugeName.text)];
+            }
+            
             isActiveLangauge = isActive;
             imgCheckMark.enabled = isActiveLangauge;
         }
@@ -56,6 +81,22 @@ namespace GamingMonks
                     LocalizationManager.Instance.SetLocalizedLanguage(currentButtonLanaguage);
                 }
             }
+            //if (LocalizationManager.Instance.GetCurrentLanguage().languageCode == "EN")
+            //{  
+            //    txtLangaugeName.text = langEn[Array.IndexOf(langEn, txtLangaugeName.text)];
+            //}
+            //if (LocalizationManager.Instance.GetCurrentLanguage().languageCode == "ES")
+            //{
+            //    txtLangaugeName.text = langEs[Array.IndexOf(langEs, txtLangaugeName.text)];
+            //}
+            //if (LocalizationManager.Instance.GetCurrentLanguage().languageCode == "RU")
+            //{
+            //    txtLangaugeName.text = langRu[Array.IndexOf(langRu, txtLangaugeName.text)];
+            //}
+            //if (LocalizationManager.Instance.GetCurrentLanguage().languageCode == "TR")
+            //{
+            //    txtLangaugeName.text = langTr[Array.IndexOf(langTr, txtLangaugeName.text)];
+            //}
         }
 
         /// <summary>

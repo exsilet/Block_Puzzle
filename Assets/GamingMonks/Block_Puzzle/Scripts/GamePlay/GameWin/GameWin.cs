@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using YG;
+using YG.Example;
 
 namespace GamingMonks
 {
@@ -38,6 +39,11 @@ namespace GamingMonks
             // {
             //     AdmobManager.Instance.RequestAndLoadRewardedAd();
             // }
+            YandexGame.OpenVideoEvent += OpenAd;
+            YandexGame.RewardVideoEvent += AddRewardCoins;
+            YandexGame.CloseVideoEvent += CloseAd;
+
+
             UIController.Instance.adsPanel.SetActive(true);
             UIController.Instance.adsOverTxt.SetActive(false);
             if(UIController.Instance.gameRetryAndQuitScreen.gameObject.activeSelf)
@@ -48,8 +54,31 @@ namespace GamingMonks
             //getExtraCoinsWithAds.text = LocalizationManager.Instance.GetTextWithTag("txtGetCoin") + GamePlay.Instance.appSettings.watchAdsRewardCoin;
             adButton.interactable = true;
             continueButton.gameObject.SetActive(GamePlayUI.Instance.level < 300/*levelSO.Levels.Length*/);
-            AddRewardCoins();
+            //AddRewardCoins();
         }
+
+        private void OnDisable()
+        {
+            YandexGame.OpenVideoEvent -= OpenAd;
+            YandexGame.RewardVideoEvent -= AddRewardCoins;
+            YandexGame.CloseVideoEvent -= CloseAd;
+        }
+
+        //public void OpenRewardAd()
+        //{
+        //    YandexGame.RewVideoShow(0);
+        //}
+
+        public void OpenAd()
+        {
+            Time.timeScale = 0;
+        }
+
+        public void CloseAd()
+        {
+            Time.timeScale = 1;
+        }
+
         public void OnLevelsButtonPressed()
         {
             //if (InputManager.Instance.canInput())
@@ -61,13 +90,14 @@ namespace GamingMonks
             UIFeedback.Instance.PlayButtonPressEffect();
             if (!PlayerPrefs.HasKey("isUserAdFree") && !(PlayerPrefs.GetInt("isUserAdFree") == 1))
             {
-                AdmobManager.Instance.ShowInterstitialAd();
+                YandexGame.FullscreenShow();
+                //AdmobManager.Instance.ShowInterstitialAd();
             }
             UIController.Instance.LoadLevelSelectionScreenFromGameWin();
             //}
         }
 
-        public void AddRewardCoins()
+        public void AddRewardCoins(int id)
         {
             if(GamePlayUI.Instance.gameWinReward)
             {
@@ -93,17 +123,19 @@ namespace GamingMonks
             UIController.Instance.gameWinScreen.Deactivate();
             if (!PlayerPrefs.HasKey("isUserAdFree") && !(PlayerPrefs.GetInt("isUserAdFree") == 1))
             {
-                AdmobManager.Instance.ShowInterstitialAd();
+                //AdmobManager.Instance.ShowInterstitialAd();
+                YandexGame.FullscreenShow();
             }
             UIController.Instance.LoadGamePlayFromLevelSelection(GameMode.Level,
                 GamePlayUI.Instance.level + 1);
-            AdmobManager.Instance.isRewardedShown = false;
+            //AdmobManager.Instance.isRewardedShown = false;
             //}
         }
 
         public void GetFiveCoinsByWatchingAdBtnPressed(int idReward)
         {
-            AdmobManager.Instance.ShowRewardedAd(RewardAdType.GetExtraCoins);
+            //AdmobManager.Instance.ShowRewardedAd(RewardAdType.GetExtraCoins);
+            YandexGame.RewVideoShow(idReward);
         }
     }
 }

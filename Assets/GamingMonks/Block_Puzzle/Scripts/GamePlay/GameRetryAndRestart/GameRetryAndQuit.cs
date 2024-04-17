@@ -17,8 +17,8 @@ namespace GamingMonks
             if (GamePlayUI.Instance.currentGameMode != GameMode.Level)
             {
                 txtAreYouSureWantToQuit.SetActive(true);
-                textYouWillLoseOneLife.SetActive(false);
-                imgHeart.SetActive(false);
+                textYouWillLoseOneLife.SetActive(true);
+                imgHeart.SetActive(true);
             }
             else
             {

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 namespace GamingMonks
 {
@@ -613,6 +614,7 @@ namespace GamingMonks
             isGameWon = false;
             gamePlay.ResetGame();
             scoreManager.ResetGame();
+            YandexGame.FullscreenShow();
         }
 
          #region Time Mode Specific
@@ -651,6 +653,7 @@ namespace GamingMonks
             TargetController.Instance.DestroyTargetsOnReloadLevel();
             AdmobManager.Instance.ResetAdPreferences();
             StartGamePlay(currentGameMode);
+            YandexGame.FullscreenShow();
         }
 
         public string GetGameModeText(GameMode gameMode)

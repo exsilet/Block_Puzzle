@@ -1,6 +1,11 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <Resources>
     <!-- Common-->
+    <string name="txtChoiceAnytime" text="Seçiminizi istediğiniz zaman uygulama ayarlarından değiştirebilirsiniz. Ortaklarımız size reklam göstermek için veri toplayacak ve cihazınızdaki benzersiz tanımlayıcıyı kullanacak. Bu uygulamanın ve ortaklarımızın verileri nasıl toplayıp kullandığı hakkında daha fazla bilgi edinin:"/>
+    <string name="txtContinueData" text="Reklamları size özel hale getirmek için verilerinizi kullanmaya devam edebilir miyiz?"/>
+    <string name="txtPrivacyData" text="Gizliliğinize ve veri güvenliğinize önem veriyoruz. Reklam göstererek uygulamaları ücretsiz tutuyoruz"/>
+    <string name="txtWatchVideo" text="5 jeton kazanmak için bir video reklam izleyin"/>
+    <string name="txtLeaderBoard" text="LİDERLER SIRALAMASI"/>
 	<string name="txtDataPrivacy" text="VERİ GİZLİLİĞİ" />
     <string name="txtPrivacyPolicy" text="GİZLİLİK POLİTİKASI" />
     <string name="txtContinue" text="DEVAM" />
@@ -17,6 +22,19 @@
     <string name="txtAwesome" text="HARİKA!" />
     <string name="txtLevel" text="Seviye" />
     <string name="txtRetry" text="Tekrar Dene" />
+    <string name = "txtCoinPack" text = "Para Paketi" />
+    <string name = "txtYouWin" text = "SEN KAZANDIN !!" />
+    <string name = "txtLevel300" text = "Seviye 300" />
+    <string name = "txtGot5Coins" text = "5 madeni paran var" />
+    <string name = "txtGoal" text = "Amaç" />
+    <string name = "txtBreakBox" text = "Domuzu toplamak için kutuyu kırın" />
+    <string name = "txtMovesLeft" text = "Burada Kaç Hamleniz Kaldığını Göreceksiniz.Hedefleri Toplamaya Devam Edin" />
+    <string name = "txtMoreLives" text = "Daha Fazla Hayat mı?" />
+    <string name = "txtVideo1life" text = "1 can almak için bir video reklam izleyin" />
+    <string name = "txtClassic" text = "Klasik" />
+    <string name = "txtSound" text = "Ses" />
+    <string name = "txtRestart?" text = "Tekrar başlat?" />
+  
 
     <!-- Consent Setting -->
     <string name="txtNotNow" text="Şimdi Değil" />
@@ -97,7 +115,7 @@
 
     <!-- RESCUE -->
     <string name="txtDontgiveup" text="Blok yerleştirilemiyor!" />
-    <string name="txtSubContent" text="1 can kaybedeceksiniz!" />
+    <string name="txtSubContent" text="Tekrar başlat can kaybedeceksiniz!" />
     <string name="txtContinuePlaying" text="Oyunu devam ettirmek ister misiniz?" />
 
     <!-- Quit Game -->

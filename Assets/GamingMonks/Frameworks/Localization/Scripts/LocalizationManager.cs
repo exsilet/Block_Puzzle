@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Xml.Linq;
 using UnityEngine;
+using YG;
 
 namespace GamingMonks.Localization
 {
@@ -74,7 +75,7 @@ namespace GamingMonks.Localization
             if (currentLanaguage == null)
             {
                 currentLanaguage = new LocalizedLanguage();
-                currentLanaguage.languageCode = "EN";
+                currentLanaguage.languageCode = "ru";
             }
 
             if (OnLocalizationInitializedEvent != null)
@@ -104,7 +105,7 @@ namespace GamingMonks.Localization
             {
                 if (localizationSettings.localizeToSystemDetectedLanguage)
                 {
-                    LocalizedLanguage autoDetectLang = allLocalizedLanaguages.Find(o => o.languageName.Contains(Application.systemLanguage.ToString()));
+                    LocalizedLanguage autoDetectLang = allLocalizedLanaguages.Find(o => o.languageName.Contains(YandexGame.EnvironmentData.language.ToUpper()));
                     if (autoDetectLang != null)
                     {
                         SetLocalizedLanguageOnAutoDetect(autoDetectLang);
@@ -131,7 +132,7 @@ namespace GamingMonks.Localization
         {
             if (lang != null)
             {
-                if (lang.languageCode != "EN")
+                if (lang.languageCode != "ru")
                 {
                     hasLanguageChanged = true;
                 }

@@ -1,6 +1,11 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <Resources>	
 	<!-- Common-->
+	<string name="txtChoiceAnytime" text="You can change your choice anytime in the app settings. Our partners will collect data and use unique identifier on your device to show you ads. Learm more about how this app and our partners collect and use data:"/>
+	<string name="txtContinueData" text="Can we continue to use your data to tailor ads for you?"/>
+	<string name="txtPrivacyData" text="We care about your privacy and data security. We keep apps free by showing ads"/>
+	<string name="txtWatchVideo" text="Watch a video ad to get 5 coins"/>
+	<string name="txtLeaderBoard" text="LEADERBOARD"/>
 	<string name = "txtDataPrivacy" text = "DATA PRIVACY"/>
 	<string name = "txtPrivacyPolicy" text = "PRIVACY POLICY"/>
 	<string name = "txtContinue" text = "CONTINUE"/>
@@ -17,6 +22,18 @@
     <string name = "txtAwesome" text = "AWESOME!"/>
 	<string name = "txtLevel" text = " Level " />
 	<string name = "txtRetry" text = " Retry " />
+	<string name = "txtCoinPack" text = "Coin Pack" />
+	<string name = "txtYouWin" text = "YOU WIN !!" />
+	<string name = "txtLevel300" text = "Level 300" />
+	<string name = "txtGot5Coins" text = "You got 5 coins" />
+	<string name = "txtGoal" text = "Goal" />
+	<string name = "txtBreakBox" text = "Break the box to collect the pig" />
+	<string name = "txtMovesLeft" text = "Here You'll See How Many Moves You Have Left.Keep Collecting Targets" />
+	<string name = "txtMoreLives" text = "More Lives?" />
+	<string name = "txtVideo1life" text = "Watch a video ad to get 1 life" />
+	<string name = "txtClassic" text = "Classic" />
+	<string name = "txtSound" text = "Sound" />
+	<string name = "txtRestart?" text = "Restart?" />
     
 	<!-- Consent Setting -->
 	<string name = "txtNotNow" text = "Not Now"/>
@@ -97,7 +114,7 @@
 
 	<!-- RESCUE -->
 	<string name = "txtDontgiveup" text = "Can't place shapes!"/>
-	<string name = "txtSubContent" text = "You Will Lose 1 Life!"/>
+	<string name = "txtSubContent" text = "Starting again You will lose 1 life!"/>
 	<string name = "txtContinuePlaying" text = "Continue Playing?"/>
 
 	<!-- Quit Game -->
