@@ -614,7 +614,7 @@ namespace GamingMonks
             isGameWon = false;
             gamePlay.ResetGame();
             scoreManager.ResetGame();
-            YandexGame.FullscreenShow();
+            //YandexGame.FullscreenShow();
         }
 
          #region Time Mode Specific
@@ -653,7 +653,7 @@ namespace GamingMonks
             TargetController.Instance.DestroyTargetsOnReloadLevel();
             AdmobManager.Instance.ResetAdPreferences();
             StartGamePlay(currentGameMode);
-            YandexGame.FullscreenShow();
+            //YandexGame.FullscreenShow();
         }
 
         public string GetGameModeText(GameMode gameMode)

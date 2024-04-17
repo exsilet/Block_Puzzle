@@ -1,6 +1,7 @@
 using GamingMonks.Localization;
 using TMPro;
 using UnityEngine;
+using YG;
 
 namespace GamingMonks
 {
@@ -76,6 +77,7 @@ namespace GamingMonks
                 {
                     UIController.Instance.OpenScreenFromTopPanel();
                 }
+                YandexGame.FullscreenShow();
                 //UIController.Instance.OpenScreenFromTopPanel();
             }
         }

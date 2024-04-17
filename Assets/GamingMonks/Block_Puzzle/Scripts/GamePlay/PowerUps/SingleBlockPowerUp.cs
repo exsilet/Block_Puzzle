@@ -96,7 +96,7 @@ namespace GamingMonks
                     return true;
                 }
             }
-            PowerUpsController.Instance.OpenShopScreen();
+            //PowerUpsController.Instance.OpenShopScreen();
             return false;
         }
 

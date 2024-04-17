@@ -4,6 +4,7 @@ using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using YG;
 
 namespace GamingMonks
 {
@@ -62,6 +63,12 @@ namespace GamingMonks
             // {
             //     AdmobManager.Instance.RequestAndLoadInterstitialAd();
             // }
+
+            YandexGame.OpenVideoEvent += OpenAd;
+            YandexGame.RewardVideoEvent += AddRewardCoins;
+            YandexGame.CloseVideoEvent += CloseAd;
+
+
             panelLocation = m_pageContainer.transform.localPosition;
             UIController.Instance.topPanelWithHearts.gameObject.SetActive(true);
             
@@ -84,6 +91,24 @@ namespace GamingMonks
 
             RefreshScreen();
             MoveToCurrentPanel();
+        }
+
+        private void OnDisable()
+        {
+            YandexGame.OpenVideoEvent -= OpenAd;
+            YandexGame.RewardVideoEvent -= AddRewardCoins;
+            YandexGame.CloseVideoEvent -= CloseAd;
+        }
+
+        public void OpenAd()
+        {
+            Time.timeScale = 0;
+        }
+
+        public void CloseAd()
+        {
+            Debug.Log("closed");
+            Time.timeScale = 1;
         }
 
         public void OnDrag(PointerEventData data)
@@ -253,13 +278,27 @@ namespace GamingMonks
             m_btnRightScroll.gameObject.SetActive(currentPage < totalPages);
         }
 
-        public void GetFiveExtraCoinsOnLevelSelectionScreenBtnPressed()
+        public void GetFiveExtraCoinsOnLevelSelectionScreenBtnPressed(int id)
         {
             // if (!AdmobManager.Instance.GetInterstitialAd().IsLoaded())
             // {
             //     AdmobManager.Instance.RequestAndLoadInterstitialAd();
             // }
-            AdmobManager.Instance.ShowRewardedAd(RewardAdType.GetFreeExtraCoinsFromLevelSelectionPanel);
+            //AdmobManager.Instance.ShowRewardedAd(RewardAdType.GetFreeExtraCoinsFromLevelSelectionPanel);
+            YandexGame.RewVideoShow(id);
+        }
+
+        public void AddRewardCoins(int id)
+        {
+            //if(GamePlayUI.Instance.gameWinReward)
+            //{
+            //coinSprites[0] = ThemeManager.Instance.GetBlockSpriteWithTag("SingleCoin");
+            //UIController.Instance.PlayAddCoinsAnimationAtPosition(coinAnimationOrigin.position,
+                //UIController.Instance.topPanelWithModeContext.coinPanelIcon.position, 0, coinSprites);
+            CurrencyManager.Instance.AddCoins(5);
+            //GamePlayUI.Instance.gameWinReward = false;
+            //}
+
         }
     }
 }

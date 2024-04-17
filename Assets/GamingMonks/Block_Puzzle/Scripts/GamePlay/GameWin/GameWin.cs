@@ -76,6 +76,7 @@ namespace GamingMonks
 
         public void CloseAd()
         {
+            Debug.Log("closed");
             Time.timeScale = 1;
         }
 
@@ -99,14 +100,14 @@ namespace GamingMonks
 
         public void AddRewardCoins(int id)
         {
-            if(GamePlayUI.Instance.gameWinReward)
-            {
+            //if(GamePlayUI.Instance.gameWinReward)
+            //{
                 coinSprites[0] = ThemeManager.Instance.GetBlockSpriteWithTag("SingleCoin");
                 UIController.Instance.PlayAddCoinsAnimationAtPosition(coinAnimationOrigin.position,
                     UIController.Instance.topPanelWithModeContext.coinPanelIcon.position, 0, coinSprites);
                 CurrencyManager.Instance.AddCoins(5);
                 GamePlayUI.Instance.gameWinReward = false;
-            }
+            //}
 
         }
 

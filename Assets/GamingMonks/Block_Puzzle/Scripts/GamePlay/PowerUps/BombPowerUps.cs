@@ -97,7 +97,7 @@ public class BombPowerUps : Singleton<BombPowerUps>, IPointerDownHandler, IBegin
                 return true;
             }
         }
-        PowerUpsController.Instance.OpenShopScreen();
+        //PowerUpsController.Instance.OpenShopScreen();
         return false;
     }
     
